@@ -1,0 +1,7 @@
+{
+    "appenders": {
+        "fileappender": { "type": "file", "filename": "./logs/simple-bot-info.log", "level": "debug" },
+        "consoleappender": { "type": "console", "level": "debug" }
+    },
+    "categories": { "default": { "appenders": ["fileappender", "consoleappender"], "level": "debug" } }
+}

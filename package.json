@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "botbuilder": "^3.14.0",
-    "bunyan": "^1.8.12",
+    "log4js": "^2.5.2",
     "restify": "^6.3.4"
   }
 }

@@ -1,20 +1,13 @@
 var restify = require('restify');
 var builder = require('botbuilder');
 var request = require('request');
-var bunyan = require('bunyan');
-var log = bunyan.createLogger({
-    name: 'simple-bot',
-    streams: [{
-            level: 'error',
-            stream: process.stdout
-        },
-        {
-            level: 'info',
-            path: './logs/simple-bot-info.log'
-        }
-    ],
-    serializers: bunyan.stdSerializers
-});
+var log4js = require('log4js');
+var log_config = require("./config/logs.json");
+
+log4js.configure(log_config);
+
+var log = log4js.getLogger('default');
+
 var config = require("./config/credentials.json");
 log.info("Bot URL: " + config.url);
 
